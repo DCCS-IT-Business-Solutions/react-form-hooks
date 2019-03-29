@@ -1,11 +1,11 @@
 {
-  "name": "@dccs/react-table-plain",
-  "version": "0.3.0",
-  "description": "A NPM package that helps creating HTML tables in a React-way.",
+  "name": "@dccs/react-form-hooks",
+  "version": "0.0.1",
+  "description": "A NPM package that helps with form handling using react hooks.",
   "main": "lib/index.js",
   "scripts": {
     "watch": "tsc --watch",
-    "build": "run-s lint test transpile",
+    "build": "run-s lint transpile",
     "transpile": "tsc",
     "lint": "tslint ./src/**/*.ts*",
     "test": "jest --runInBand --coverage",
@@ -13,29 +13,27 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DCCS-IT-Business-Solutions/react-table-plain.git"
+    "url": "git+https://github.com/DCCS-IT-Business-Solutions/react-form-hooks.git"
   },
   "keywords": [
     "npm",
     "node",
     "react",
-    "table",
-    "sorting",
-    "filter",
-    "paging",
-    "javascrip",
+    "form",
+    "hooks",
+    "javascript",
     "typescript"
   ],
   "author": "Stephan Meißner",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DCCS-IT-Business-Solutions/react-table-plain/issues"
+    "url": "https://github.com/DCCS-IT-Business-Solutions/react-form-hooks/issues"
   },
-  "homepage": "https://github.com/DCCS-IT-Business-Solutions/react-table-plain#readme",
+  "homepage": "https://github.com/DCCS-IT-Business-Solutions/react-form-hooks#readme",
   "dependencies": {
     "lodash": "^4.17.11",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -50,16 +48,18 @@
       "**/__tests__/**/*.ts?(x)",
       "c**/?(*.)(spec|test).ts?(x)"
     ],
-    "setupTestFrameworkScriptFile": "<rootDir>/setupTests.js"
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupTests.js"
+    ]
   },
   "devDependencies": {
     "@types/jest": "^23.3.9",
     "@types/lodash": "^4.14.118",
-    "@types/react": "^16.7.13",
-    "@types/react-dom": "^16.0.11",
-    "enzyme": "^3.8.0",
-    "enzyme-adapter-react-16": "^1.7.1",
-    "jest": "^23.6.0",
+    "@types/react": "16.8.10",
+    "@types/react-dom": "16.8.3",
+    "enzyme": "3.9.0",
+    "enzyme-adapter-react-16": "1.11.2",
+    "jest": "24.5.0",
     "npm-run-all": "^4.1.5",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.17.0",
