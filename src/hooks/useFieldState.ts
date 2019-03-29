@@ -1,4 +1,4 @@
-import * as React from "react";
+import { FormEvent, useState } from "react";
 
 export interface IFieldStateInput {
   initialValue: string;
@@ -16,19 +16,19 @@ export type ValidationFn = (v: any) => string | null;
 
 export function useFieldState(
   initialValue: any,
-  valFn: ValidationFn
+  valFn?: ValidationFn
 ): IFieldState {
-  const [value, setValue] = React.useState(initialValue);
-  const [touched, setTouched] = React.useState(false);
-  const [error, setError] = React.useState("");
+  const [value, setValue] = useState(initialValue);
+  const [touched, setTouched] = useState(false);
+  const [error, setError] = useState("");
 
-  function handleChange(e: React.FormEvent<HTMLInputElement>) {
+  function handleChange(e: FormEvent<HTMLInputElement>) {
     setValue(e.currentTarget.value);
     setTouched(e.currentTarget.value !== initialValue);
     //    handleBlur();
   }
 
-  function handleBlur(e: React.FormEvent<HTMLInputElement>) {
+  function handleBlur(e: FormEvent<HTMLInputElement>) {
     if (valFn != null) {
       setError(valFn(e.currentTarget.value) || "");
     }
