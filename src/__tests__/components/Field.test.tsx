@@ -3,8 +3,12 @@ import { shallow, mount } from "enzyme";
 import { useFieldState } from "../../hooks/useFieldState";
 import { Field } from "../../components/Field";
 
-/*it("should render", () => {
+function FieldTest() {
   const demo = useFieldState("demo", null);
-  const sut = shallow(<Field label="Demo" state={demo} />);
+  return <Field label="Demo" state={demo} />;
+}
+
+it("should render", () => {
+  const sut = shallow(<FieldTest />);
   expect(sut).toMatchSnapshot();
-});*/
+});
