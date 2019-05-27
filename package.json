@@ -1,6 +1,6 @@
 {
   "name": "@dccs/react-form-hooks",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A NPM package that helps with form handling using react hooks.",
   "main": "lib/index.js",
   "scripts": {
